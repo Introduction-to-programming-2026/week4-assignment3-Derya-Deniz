@@ -1,23 +1,24 @@
 #include <stdio.h>
 
-int main() {
+int main(void)
+{
     int n;
 
-    // Ask the user for a positive integer until it is valid
-    do {
-        printf("Enter a positive integer n: ");
+    // input validation
+    do
+    {
+        printf("Enter a positive integer: ");
         scanf("%d", &n);
-    } while (n < 1);
+    }
+    while (n < 1);
 
-    // Outer loop for each row
-    for (int i = 1; i <= n; i++) {
-        
-        // Inner loop to print # for the current row
-        for (int j = 0; j < i; j++) {
+    // pyramid
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
             printf("#");
         }
-        
-        // Move to the next line after finishing the row
         printf("\n");
     }
 
